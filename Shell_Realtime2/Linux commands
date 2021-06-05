@@ -1,0 +1,242 @@
+Linux commands:
+
+Monitoring commands :
+
+1.who
+2.last
+3. W
+4. Finger
+5. id
+
+ex: last | more
+ex: last | awk '{print $1}'
+Move duplicates:
+ex: last | awk '{print $1}' | sort | uniq
+
+ex: 
+w
+
+finger coomads: 
+
+====================================================
+
+Cut commands:
+
+1.cut file name
+2. cut --version
+3. cut -c1 filename
+4. cut -c1, 2,4
+5. cut -c1-3 filename --> it will print the first three chacrters
+Specific range of charcters
+7. cut -c1-3,6-8 file name
+
+bytes of data:
+
+cut -b1-3 filename
+
+cloumn of the files:
+
+ex: cat /etc/passwd
+
+ cut -d: -f 6 /etc/passwd
+
+
+==========================================
+
+awk --version
+ls -l | awk '{print $9}'
+ls -l | awk '{print $NF}'
+
+awk '/Jerry/ {print} ' file 
+
+awk -F: '{print $1} ' /etc/passwd   # first filed of etc/passwd
+
+echo "Hello Tom" | awk '{$2="adam" ; print $0)' # replace worrds filed words
+
+
+my name is second column:
+
+cat filename | awk'{$2="RAj";print $0}'
+
+
+awk 'length ($0) >15 '  file # get lines that have more than 15 byte size
+
+
+
+==============================
+
+
+WC --new line count
+
+
+sort and unique
+
+
+==========
+truncte a file size
+
+======================================
+
+how to set a hostname
+
+hostnamectl -set-hostname newhostname 
+
+version 7 = Edit /etc/hostanme
+
+version 6 = Edit  /etc/sysconfig/network
+
+su -
+
+cat /etc/hostname
+hostnamectl set-hostname nychostl
+
+reboot
+ or
+
+init 6
+
+===============
+
+Finding system infromation:
+
+uptime
+ cat /etc/redhat-release
+ uname -a
+ uname
+ dmidecode
+
+==============================================
+system architecture
+
+-	32 bit and 64 bit processer
+-	
+============================================
+terminal control keys:
+-	CTRL key are accomplished key
+-   The most common control keys are listed below
+
+CTRL-u : erase everythinh youve typed
+CTRL-C  : Stop/killed a coomnd
+CTRl-Z:  suspend a command
+CTRl-D: exit from an interactive program
+
+======================================================
+Enviornment varaibles:
+
+Dynamic named value, that can affect the way running process will behave  on a computer
+
+In simple words
+
+
+============================================================
+
+Network file and Commands:
+
+ ping
+ if config
+ ifup or ifdown
+ netstat
+ tcpdump
+
+ ===============
+
+ central oog:
+
+
+ service or package = rsyslog
+
+ configuration file = /etc/rsyslog.conf
+
+ service:
+  		systemctl restart rsyslog
+  		systemctl enable rsyslog
+
+
+ ======================
+ 
+Network hardeling:
+
+	- netstat -tunlp
+ 
+ firewall-config
+
+
+ host keys location :
+
+ /etc/ssh/ssh_known_hosts
+
+
+ ==============================
+
+How to check iptables:
+
+ ps -ef | grep iptable
+
+systemctl stop firewalld
+
+cd /etc/sysconfig
+
+more iptables-config
+
+newer system:
+
+ cd /etc/firewalld/	
+
+ ls -ltr
+
+ all the user check:
+
+ - cat /etc/users
+
+ user add  test # user id creation
+
+  chage -l raj #how to check when password was change
+  
+  cat /etc/shadow #
+   cat /etc/login.defs
+
+   rpm -qa # how to check a packages
+
+   systemctl -a
+
+   /etc/ssh/sshd_config --> Can be modfy, port number  and 
+
+===================================
+
+Openldap insttaltion:
+
+  - yum install *openldap*
+
+=======================
+
+
+system run level:
+
+-  0- shutdown -> init 0
+    1- single user mode,usually aliased as s
+     init 6- reboot the systyem
+
+
+     init -2 -- multiuser mode
+
+     inti -3  Multiuser mode with networking
+     int -5 Multi user mode with networking and GUI
+
+
+ =========================================================
+
+DIsk partition:
+
+df
+fdisk
+
+fdisk -l --> Disk /dev/sda
+
+fdisk -l | more
+
+
+================
+
+=============================
+
+
