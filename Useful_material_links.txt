@@ -8,3 +8,5 @@ python
 
 https://github.com/tecladocode/complete-python-course
 
+###Terraform 
+https://github.com/zealvora/terraform-beginner-to-advanced-resource
