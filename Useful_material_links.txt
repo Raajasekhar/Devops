@@ -2,4 +2,5 @@ https://github.com/yankils
 https://github.com/wardviaene
 https://github.com/wardviaene/jenkins-course
 https://github.com/ricardoandre97/terraform-app-sms
+https://github.com/Pierian-Data/Complete-Python-3-Bootcamp
 
